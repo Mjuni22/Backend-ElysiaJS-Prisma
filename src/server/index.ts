@@ -10,11 +10,11 @@ const app = new Elysia();
 app
   .use(
     rateLimit({
-      max: 5,
+      max: 20,
       errorResponse: new Response("Too many requests", { status: 429 }),
     })
   )
-  .use(cors())
+  .use(cors({}))
   .use(helmet())
   .use(logger())
   .use(SensorRoutes);
