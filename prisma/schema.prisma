@@ -1,0 +1,25 @@
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "binary"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Sensor {
+  id        String   @id @default(cuid())
+  pm10      Float
+  pm25      Float
+  so2       Float
+  co        Float
+  o3        Float
+  no2       Float
+  max       Float
+  critical  String
+  category  String
+  location  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
