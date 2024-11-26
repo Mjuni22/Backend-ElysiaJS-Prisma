@@ -1,4 +1,3 @@
-// src/repositories/SensorRepository.ts
 import prisma from "../../prisma/client/index";
 
 export class SensorRepository {

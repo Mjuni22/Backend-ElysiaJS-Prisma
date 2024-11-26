@@ -10,15 +10,19 @@ const app = new Elysia();
 app
   .use(
     rateLimit({
-      max: 20,
+      max: 15,
       errorResponse: new Response("Too many requests", { status: 429 }),
     })
   )
-  .use(cors({}))
+  .use(
+    cors({
+      methods: ["GET", "POST", "PATCH", "DELETE"],
+    })
+  )
   .use(helmet())
-  .use(logger())
+  .use(logger({ withTimestamp: true, withBanner: true }))
   .use(SensorRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log("Server running on http://localhost:3000");
+  console.log("Server running on Port 3000");
 });

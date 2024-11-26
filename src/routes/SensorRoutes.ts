@@ -12,7 +12,7 @@ const Routes = new Elysia({ prefix: "/sensor" })
   .post("/create", async ({ body }: { body: Sensor }) => {
     return sensorController.createSensor({ body });
   })
-  .get("/getAll", async (): Promise<any> => {
+  .get("/getAll", async () => {
     return sensorController.getAllSensors();
   })
   .get("/:id", async ({ params }: { params: SensorParams }) => {
@@ -20,13 +20,7 @@ const Routes = new Elysia({ prefix: "/sensor" })
   })
   .patch(
     "/:id",
-    async ({
-      params,
-      body,
-    }: {
-      params: SensorParams;
-      body: Partial<Sensor>;
-    }) => {
+    async ({ params, body }: { params: SensorParams; body: Sensor }) => {
       return sensorController.updateSensor({ params, body });
     }
   )
