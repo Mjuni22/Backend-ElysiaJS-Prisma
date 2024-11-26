@@ -8,7 +8,7 @@ Bergabunglah dalam proyek ini untuk membuat dunia lebih hijau dan lebih sehat!
 
 ## 📜 Deskripsi Proyek
 
-Proyek ini adalah API backend yang menyediakan data kualitas udara berdasarkan lokasi geografi (latitude dan longitude). API ini berguna untuk aplikasi berbasis web yang ingin memberikan informasi kepada pengguna tentang tingkat pencemaran udara yang dapat mempengaruhi kesehatan mereka.
+Proyek ini adalah API backend yang menyediakan data kualitas udara berdasarkan lokasi wilayah. API ini berguna untuk aplikasi berbasis web yang ingin memberikan informasi kepada pengguna tentang tingkat pencemaran udara yang dapat mempengaruhi kesehatan mereka.
 
 Menggunakan **dataset pencemaran udara** dari **Kaggle**, API ini menyediakan data real-time tentang polusi udara dan memungkinkan pengguna untuk menganalisis data tersebut berdasarkan standar kualitas udara global.
 
